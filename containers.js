@@ -39,8 +39,6 @@ if (process.env.hasOwnProperty('DOCKER_HOST')) {
     }
 }
 
-console.log(dockerBaseUri);
-require('util').inspect(dockerOptions, { depth: 15, compact: false, showHidden: true });
 
 /**
  *
@@ -142,7 +140,6 @@ async function mapContainers() {
         }
     );
 
-    console.log(map);
     return map;
 }
 
@@ -156,9 +153,9 @@ async function mapContainers() {
     )
 }();
 
-module.exports = function() {
+module.exports.all = function() {
     return containerMap;
-}
+};
 
 /**
  * @typedef Container

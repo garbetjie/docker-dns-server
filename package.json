@@ -6,5 +6,8 @@
   "main": "server.js",
   "devDependencies": {
     "@types/node": "^14.14.12"
+  },
+  "dependencies": {
+    "dns2": "^2.0.0"
   }
 }
